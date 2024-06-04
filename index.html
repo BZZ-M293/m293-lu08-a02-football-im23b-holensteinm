@@ -2,20 +2,28 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>1. FC Hinterforst</title>
-
+  <title>Buchformular</title>
 </head>
 <body>
-  <header>
-    
-  </header>
-  <nav>
-    
-  </nav>
-  <h1>1. FC Hinterforst</h1>
+<h1>Buch erfassen</h1>
+<form action="https://it.bzz.ch/demo/formdata/index.php" method="post">
+  <label for="buchtitel">Buchtitel:</label>
+  <input type="text" id="buchtitel" name="buchtitel" minlength="2" maxlength="30" required><br><br>
 
-  <footer>
-    
-  </footer>
+  <label for="autoren">Autoren:</label>
+  <input type="text" id="autoren" name="autoren" minlength="5" maxlength="40"><br><br>
+
+  <label for="preis">Preis:</label>
+  <input type="number" id="preis" name="preis" step="0.01" min="0.05" max="99.95" required><br><br>
+
+  <label for="erscheinungsdatum">Erscheinungsdatum:</label>
+  <input type="date" id="erscheinungsdatum" name="erscheinungsdatum" min="1900-01-01" max="9999-12-31" required><br><br>
+
+  <label for="auflage">Auflage:</label>
+  <input type="number" id="auflage" name="auflage" min="1" max="9" required><br><br>
+
+  <input type="submit" value="Absenden">
+  <input type="reset" value="Zurücksetzen">
+</form>
 </body>
 </html>
